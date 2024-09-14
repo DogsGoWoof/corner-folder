@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Bookmarker | Tabulater | Corner Folder",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "./public/bookmark-logo.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

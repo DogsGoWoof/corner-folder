@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./public/bookmark-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <title>Bookmarker | Tabulater | Corner Folder</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#favourites">Favourites</a>
+        <a href="#page-add">Add</a>
+        <!-- Have add page link also autofill form with current page, toggle with setting -->
+        <a href="#page-collection">Pages</a>
+        <!-- add page-turning theme, maybe make body span several total viewport widths with fixed nav to auto scroll -->
+         <!-- add search here or to individual containers to filter results/return and render match(s) in popup -->
+    </nav>
+
+    <!-- Add favourites page as first -->
+     <section id="favourites">
+        <h1>Favourites</h1>
+        <div id="favourites-container">
+            <ul id="favourites-list">
+            </ul>
+        </div>
+     </section>
+
+    <form id="page-add">
+        <fieldset>
+            <!-- conditionally render to reuse form / use JS to alter func-->
+            <legend>
+                <h1>Add Page</h1>
+            </legend>
+            <label for="name">Name:</label>
+            <input name="name" type="text" id="input-name" />
+            <label for="input-img">Image:</label>
+            <input name="input-img" type="text" id="input-img" />
+            <!-- add image preview as icon as well as default -->
+            <label for="url">URL:</label>
+            <textarea name="url" type="text" id="url"></textarea>
+            <div id="btn-div">
+                <button id="btn-1">Save</button>
+                <button id="btn-2">Autofill</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <section id="page-collection">
+        <h1>Saved Pages</h1>
+        <div id="page-list-container">
+            <ul id="page-list">
+            </ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
