@@ -12,35 +12,49 @@
 <body>
     <nav>
         <a class="favourites" id="link-favourites" href="#favourites">Favourites</a>
-        <a class="add" id="link-add" href="#page-add">Add</a>
+        <a class="add" id="link-add" href="#page-add">Page</a>
         <!-- Have add page link also autofill form with current page, toggle with setting -->
-        <a class="pages" id="link-pages" href="#page-collection">Pages</a>
+        <a class="pages" id="link-pages" href="#page-collection">Saved</a>
         <!-- add page-turning theme, maybe make body span several total viewport widths with fixed nav to auto scroll -->
-         <!-- add search here or to individual containers to filter results/return and render match(s) in popup -->
+        <!-- add search here or to individual containers to filter results/return and render match(s) in popup -->
     </nav>
 
+    <div id="search-container">
+        <input id="input-search" type="search" placeholder="Search" />
+    </div>
+
     <!-- Add favourites page as first -->
-     <section class="favourites" id="favourites">
-        <h1>Favourites</h1>
+    <section class="favourites" id="favourites">
+        <div class="folder-headers">
+            <h1 class="folder-name">Favourites</h1>
+            <textarea class="link-name" id="link-name-favourite"></textarea>
+        </div>
         <div id="favourites-container">
             <ul id="favourites-list">
             </ul>
         </div>
-     </section>
+    </section>
 
     <form class="add" id="page-add">
         <fieldset>
             <!-- conditionally render to reuse form / use JS to alter func-->
-            <legend>
-                <h1>Add Page</h1>
-            </legend>
-            <label for="name">Name:</label>
-            <input name="name" type="text" id="input-name" />
+            <h1>Page</h1>
+            <label for="input-name">Name:</label>
+            <input type="text" id="input-name" />
             <label for="input-img">Image:</label>
-            <input name="input-img" type="text" id="input-img" />
+            <input type="text" id="input-img" />
             <!-- add image preview as icon as well as default -->
+            <img class="page-image-preview" id="input-img-preview" src="./public/bookmark-logo.png" alt="Image to be used for link icon">
+            <!-- category input with select option of existing categories below -->
+            <label for="input-category">Category</label>
+            <input type="text" id="input-category">
+            <select id="select-category">
+                <option value="" disabled selected hidden>Select from existing categories</option>
+            </select>
+            <label for="check-favourite">Favourite?</label>
+            <input type="checkbox" name="check-favourite" id="check-favourite">
             <label for="url">URL:</label>
-            <textarea name="url" type="text" id="url"></textarea>
+            <textarea type="url" id="url" required></textarea>
             <div id="btn-div">
                 <button id="btn-1">Save</button>
                 <button id="btn-2">Autofill</button>
@@ -49,13 +63,19 @@
     </form>
 
     <section class="pages" id="page-collection">
-        <h1>Saved Pages</h1>
+        <div class="folder-headers">
+            <h1 class="folder-name">Saved Pages</h1>
+            <textarea class="link-name" id="link-name-page"></textarea>
+        </div>
         <div id="page-list-container">
             <ul id="page-list">
             </ul>
         </div>
     </section>
 
+    <div id="message-container">
+        <p id="message"></p>
+    </div>
     <script src="script.js"></script>
 </body>
 
