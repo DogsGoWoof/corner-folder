@@ -1,4 +1,4 @@
-# Corner Folder
+# Corner Folder - (Chrome Extension)
 Bookmarks and bookmark folders get out of hand easily when trying to organize them.  
 "Has _this_ ever happened to you?"  
 So this is a simplified UI for it. [XKCD - 927](https://imgs.xkcd.com/comics/standards_2x.png)  
